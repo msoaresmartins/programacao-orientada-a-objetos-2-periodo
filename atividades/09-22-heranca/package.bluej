@@ -1,0 +1,24 @@
+#BlueJ package file
+project.charset=UTF-8
+package.numDependencies=0
+package.numTargets=3
+package.showExtends=true
+package.showUses=true
+target1.name=Hokage
+target1.type=ClassTarget
+target1.x=40
+target1.y=40
+target1.width=150
+target1.height=70
+target2.name=Main
+target2.type=ClassTarget
+target2.x=220
+target2.y=40
+target2.width=150
+target2.height=70
+target3.name=Ninja
+target3.type=ClassTarget
+target3.x=400
+target3.y=40
+target3.width=150
+target3.height=70
