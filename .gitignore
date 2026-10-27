@@ -1,0 +1,6 @@
+*.class
+*.ctxt
+**/.build/
+**/bin/
+.DS_Store
+Thumbs.db

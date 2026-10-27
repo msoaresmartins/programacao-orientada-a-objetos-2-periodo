@@ -1,15 +1,31 @@
-# Programação Orientada a Objetos — 2º período
+# POO - 2º período
 
-Exercícios e estudos da disciplina de Programação Orientada a Objetos da UFG, organizados por atividade e projeto.
+Sou o Marcelo, aluno de Engenharia de Computação na UFG. Aqui juntei meus exercícios de Java, estudos para a P1 e atividades que enviei no Turing em 2026/2.
 
-## Organização
+## Atividades
 
-- **Atividades Laboratório POO:** exercícios desenvolvidos nas aulas de laboratório.
-- **Estudos P1 (BlueJ):** projetos de estudo para a primeira avaliação, incluindo exemplos de classes, parâmetros e objetos.
-- **Turing:** atividade com as classes `Bateria` e `TesteBateria`.
+| Data | Atividade | Arquivos |
+|---|---|---|
+| 25/08 | Entrada e saída de dados | [Cinco exercícios](atividades/08-25-entrada-saida) |
+| 08/09 | Classes e objetos | [Ninjas](atividades/09-08-classes-objetos) |
+| 22/09 | Herança e polimorfismo | [Ninja e Hokage](atividades/09-22-heranca) |
+| 25/09 | Questões para a P1 | [Questões, gabarito e respostas](atividades/09-25-questoes) |
+| 25/09 | Simulado prático | [Gerenciamento de bateria](atividades/09-25-bateria) |
+| 06/10 | Classes abstratas | [Ninja, Naruto e Sasuke](atividades/10-06-classes-abstratas) |
+| 13/10 | Interfaces | [Interface Jutsu](atividades/10-13-interfaces) |
+| 20/10 | JavaFX com MVC | [Relatório da calculadora de Bhaskara](atividades/10-20-javafx-mvc) |
 
-Cada projeto contém seus arquivos de classe `.java` e um `README.md` próprio com uma breve explicação. Arquivos gerados pela compilação e materiais de apoio não fazem parte deste repositório.
+Os exemplos que usei para revisar a primeira prova estão em [estudos/p1](estudos/p1).
 
-## Como explorar
+## Como abrir
 
-Abra a pasta do projeto desejado no VS Code ou no BlueJ e leia o `README.md` daquele projeto. Para executar um programa pelo terminal, entre na pasta que contém a classe principal e use `javac` para compilá-la e `java` para executá-la. Alguns projetos dependem de outras classes `.java` na mesma pasta.
+Cada pasta é um projeto separado. No BlueJ, abra a pasta da atividade e compile as classes. No VS Code, abra uma pasta por vez e execute a classe que tem o método `main`.
+
+Os exercícios sem interface gráfica também podem ser compilados pelo terminal, dentro da pasta do projeto:
+
+```sh
+javac -encoding UTF-8 *.java
+java Programa
+```
+
+O nome da classe principal muda em alguns exercícios, como `Ex1`, `Main` e `TesteBateria`. A pasta de JavaFX guarda o PDF que entreguei, com a explicação e as capturas da aplicação e do código.
