@@ -1,16 +1,14 @@
 # 06/10 - AT-10-06-3: Classe Abstrata do Projeto
 
-Nome no Turing: **[TEO+LAB] AT-10-06-3: Classe Abstrata do Projeto (prazo até 12/10)**.
+[TEO+LAB] · Prazo: 12/10 · [Enunciado no Turing](https://turing.inf.ufg.br/mod/forum/view.php?id=77232)
 
-[Enunciado do professor](https://turing.inf.ufg.br/mod/forum/view.php?id=77232).
-
-Criei a classe abstrata `Ninja`, com o método abstrato `usarJutsu()`. `Naruto` e `Sasuke` são as subclasses e cada uma implementa um jutsu diferente.
+`Ninja` é a classe abstrata. `Naruto` e `Sasuke` herdam dela e cada um tem sua versão de `usarJutsu()`.
 
 O `Programa` cria os dois objetos usando referências do tipo `Ninja` e chama seus métodos.
 
 ## Questão respondida
 
-Uma classe abstrata não pode ser instanciada diretamente, mas uma referência desse tipo pode apontar para um objeto de uma subclasse concreta. Por isso, um método pode receber uma `Conta` e trabalhar com uma `ContaPoupanca` ou outra subclasse. A mesma ideia aparece no exemplo dos ninjas.
+Não dá para criar um objeto diretamente de uma classe abstrata. Dá para usar uma referência dela para guardar um objeto da subclasse. Por exemplo, uma variável `Conta` pode receber uma `ContaPoupanca`. No código, isso acontece com `Ninja`, `Naruto` e `Sasuke`.
 
 Para testar, compile as quatro classes e execute `Programa`.
 

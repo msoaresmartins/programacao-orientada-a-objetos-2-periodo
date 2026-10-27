@@ -1,12 +1,10 @@
 # 13/10 - AT-10-13: Interface do Projeto
 
-Nome no Turing: **[TEO+LAB] AT-10-13: Interface do Projeto (prazo até 19/10)**.
-
-[Enunciado do professor](https://turing.inf.ufg.br/mod/forum/view.php?id=77287).
+[TEO+LAB] · Prazo: 19/10 · [Enunciado no Turing](https://turing.inf.ufg.br/mod/forum/view.php?id=77287)
 
 Continuei o exemplo dos ninjas. `Naruto` e `Sasuke` herdam de `Ninja` e implementam a interface `Jutsu`, que declara o método `usarJutsu()`.
 
-No `Programa`, os quatro objetos ficam em um array do tipo `Jutsu`. O laço chama o mesmo método para todos, mas cada objeto executa a implementação da sua classe. Isso é polimorfismo: o programa trabalha com a interface sem precisar separar os tipos de ninja.
+No `Programa`, coloquei os quatro objetos em um array de `Jutsu`. O laço chama `usarJutsu()` para todos: Naruto usa Rasengan e Sasuke usa Chidori.
 
 ## Saída
 
