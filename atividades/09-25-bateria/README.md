@@ -1,4 +1,8 @@
-# Gerenciamento de bateria - 25/09
+# 25/09 - Simulado de questão prática
+
+Nome no Turing: **Atividade 09-25: Simulado de questão prática (prazo até 29/09 - 12:00)**.
+
+[Enunciado do professor](https://turing.inf.ufg.br/mod/forum/view.php?id=77117).
 
 Simulado com as classes `Bateria` e `TesteBateria`. A bateria tem modelo, carga e capacidade. O programa cria três objetos com construtores diferentes, simula consumo e recarga e mostra o estado de cada bateria.
 

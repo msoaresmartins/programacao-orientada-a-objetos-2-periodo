@@ -1,4 +1,8 @@
-# Interfaces - 13/10
+# 13/10 - AT-10-13: Interface do Projeto
+
+Nome no Turing: **[TEO+LAB] AT-10-13: Interface do Projeto (prazo até 19/10)**.
+
+[Enunciado do professor](https://turing.inf.ufg.br/mod/forum/view.php?id=77287).
 
 Continuei o exemplo dos ninjas. `Naruto` e `Sasuke` herdam de `Ninja` e implementam a interface `Jutsu`, que declara o método `usarJutsu()`.
 
