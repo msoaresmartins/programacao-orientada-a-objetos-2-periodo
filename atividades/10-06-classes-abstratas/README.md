@@ -1,4 +1,8 @@
-# Classes abstratas - 06/10
+# 06/10 - AT-10-06-3: Classe Abstrata do Projeto
+
+Nome no Turing: **[TEO+LAB] AT-10-06-3: Classe Abstrata do Projeto (prazo até 12/10)**.
+
+[Enunciado do professor](https://turing.inf.ufg.br/mod/forum/view.php?id=77232).
 
 Criei a classe abstrata `Ninja`, com o método abstrato `usarJutsu()`. `Naruto` e `Sasuke` são as subclasses e cada uma implementa um jutsu diferente.
 
