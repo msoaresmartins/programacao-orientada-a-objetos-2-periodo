@@ -1,80 +1,65 @@
 # 27/10 - AT-10-27-1: Implementar ORM de uma classe Modelo do Projeto
 
-[LAB] · Prazo: 02/11 · [Enunciado no Turing](https://turing.inf.ufg.br/mod/forum/view.php?id=77433)
+[Atividade no Turing](https://turing.inf.ufg.br/mod/forum/view.php?id=77433) — prazo: 02/11.
 
-Usei a classe `Produto` do AlphaField, um projeto de estoque para pequenas mercearias. O cadastro fica salvo no SQLite com ORMLite. Os testes abaixo foram feitos chamando os métodos pelo BlueJ.
+Usei a classe `Produto` do AlphaField, um projeto de estoque para pequenas mercearias. Ela tem código, nome, preço, quantidade e validade. O ID é gerado pelo banco.
 
-## Arquivos
+O ORMLite faz o mapeamento para a tabela `produtos` no SQLite. A classe `Database` cuida da conexão com `alphafield.db`, e a `ProdutoRepository` tem os métodos do CRUD.
 
-- `Produto.java`: dados do produto e tabela `produtos`. O ID é automático e o código não pode se repetir.
-- `Database.java`: abre a conexão com `alphafield.db`.
-- `ProdutoRepository.java`: faz o cadastro, a consulta, a atualização e a exclusão.
-- `+libs/`: bibliotecas do projeto.
-- `prints/`: capturas dos testes.
+## Cadastro
 
-## Testes do CRUD
+Cadastrei o Arroz 5kg, código `P001`, com preço de R$ 24,90, quantidade 12 e validade 31/12/2027. Chamei `create(produto1)` pelo BlueJ.
 
-### 1. Cadastrar (Create)
+![Retorno do cadastro](prints/01-create.png)
 
-Cadastrei o Arroz 5kg (`P001`), com preço de R$ 24,90, quantidade 12 e validade 31/12/2027. O método `create(produto1)` retornou o produto.
+O terminal registrou `Produto cadastrado! ID: 1`, como aparece na [captura do terminal](prints/complementares/04-delete-linha-excluida.png).
 
-![Retorno do método create no BlueJ](prints/01-create.png)
+## Consulta
 
-O cadastro recebeu o ID 1, como aparece no [terminal](prints/complementares/04-delete-linha-excluida.png).
+Consultei o [ID 1 com loadFromId](prints/complementares/02-read-consulta-por-id.png). Depois chamei `toString()` no objeto retornado para ver os dados.
 
-### 2. Consultar (Read)
+![Arroz 5kg com quantidade 12](prints/02-read.png)
 
-Consultei o [ID 1 com `loadFromId(1)`](prints/complementares/02-read-consulta-por-id.png). O `toString()` mostrou o Arroz 5kg com os dados cadastrados e quantidade 12.
+## Atualização
 
-![Dados do produto P001 consultado](prints/02-read.png)
+Mudei a quantidade para 20 e chamei `update`. O terminal mostrou `Produtos atualizados: 1`. Fiz outra consulta e a quantidade já estava atualizada.
 
-### 3. Atualizar (Update)
+![Uma linha atualizada](prints/complementares/03-update-linha-atualizada.png)
 
-Mudei a quantidade de 12 para 20 e chamei `update`. O terminal informou uma linha atualizada. Na nova consulta, a quantidade já era 20.
+![Arroz 5kg com quantidade 20](prints/03-update.png)
 
-![Uma linha atualizada no banco](prints/complementares/03-update-linha-atualizada.png)
+## Exclusão
 
-![Produto P001 com quantidade 20](prints/03-update.png)
+Chamei [delete passando o produto](prints/complementares/04-delete-execucao.png). O terminal mostrou `Produtos excluidos: 1`.
 
-### 4. Excluir (Delete)
+![Resultado da exclusão no terminal](prints/complementares/04-delete-linha-excluida.png)
 
-Chamei [`delete` passando o produto](prints/complementares/04-delete-execucao.png). O terminal mostrou `Produtos excluidos: 1`.
+Ao consultar o ID 1 de novo, o resultado foi `null`.
 
-![Mensagens dos testes no terminal, incluindo a exclusão](prints/complementares/04-delete-linha-excluida.png)
+![Produto não encontrado depois da exclusão](prints/04-delete.png)
 
-Depois, a consulta do ID 1 retornou `null`: o produto não estava mais no banco.
+## Persistência
 
-![Consulta do ID 1 retornando null](prints/04-delete.png)
+Para esse teste, cadastrei o Feijao 1kg (`P002`), com preço de R$ 8,50, quantidade 15 e validade 15/10/2027. Ele recebeu o ID 2.
 
-## Teste de persistência
+![Cadastro do segundo produto](prints/complementares/05-persistencia-cadastro-p002.png)
 
-Cadastrei outro produto: Feijao 1kg (`P002`), preço de R$ 8,50, quantidade 15 e validade 15/10/2027. Ele recebeu o ID 2.
+![ID gerado para o segundo produto](prints/complementares/05-persistencia-id2.png)
 
-![Dados do segundo produto](prints/complementares/05-persistencia-cadastro-p002.png)
+Fechei e abri o BlueJ novamente, criei a conexão com o mesmo banco e consultei o ID 2. Os dados do produto continuaram salvos.
 
-![ID 2 do produto cadastrado](prints/complementares/05-persistencia-id2.png)
+![Conexão criada após reabrir o projeto](prints/complementares/05-persistencia-reabertura-conexao.png)
 
-Na sequência do teste após reabrir o projeto, criei a conexão novamente e consultei o ID 2. Os dados do Feijao 1kg continuaram salvos.
+![Consulta do ID 2](prints/complementares/05-persistencia-consulta-id2.png)
 
-![Conexão e tabela prontas no projeto reaberto](prints/complementares/05-persistencia-reabertura-conexao.png)
+![Dados do Feijao 1kg recuperados](prints/05-persistencia.png)
 
-![Consulta pelo ID 2](prints/complementares/05-persistencia-consulta-id2.png)
+## Para executar
 
-![Dados do produto P002 recuperado](prints/05-persistencia.png)
+Abra esta pasta no BlueJ e compile as três classes. Crie um `Database("alphafield.db")` e passe esse objeto para o construtor de `ProdutoRepository`.
 
-O fechamento do BlueJ foi relatado durante o teste. Os prints mostram a conexão e a consulta feitas depois.
+As bibliotecas estão em `+libs`: ORMLite 6.1, SQLite JDBC 3.46.0.0 e SLF4J 2.0.13. Para a validade, use uma data como `java.sql.Date.valueOf("2027-12-31")`.
 
-## Como abrir no BlueJ
+Os IDs podem mudar em outros testes. Para testar a persistência, é preciso reabrir a mesma pasta e usar o mesmo banco.
 
-1. Abra a pasta do projeto, que contém `package.bluej` e a pasta `+libs`.
-2. Compile as três classes.
-3. Crie um objeto `Database` com o nome `"alphafield.db"` e um `ProdutoRepository` passando esse objeto.
-4. Crie um `Produto` e use os métodos `create`, `loadFromId`, `loadAll`, `update` e `delete` do repositório.
-
-Para preencher a validade, use uma data como `java.sql.Date.valueOf("2027-12-31")`. Nas consultas, use o ID que o seu cadastro recebeu. Para testar a persistência, reabra a mesma pasta com o mesmo banco.
-
-As bibliotecas da pasta `+libs` são ORMLite 6.1, SQLite JDBC 3.46.0.0 e SLF4J 2.0.13.
-
-Os prints estão como vieram no ZIP. Obs.: `01-create-id-gerado.png` mostra o ID 2; o registro do ID 1 está na captura do terminal usada acima.
-
-Referência: [tutorial de ORM com Java, ORMLite e SQLite](https://github.com/marceloakira/tutorials/blob/main/orm/README.md).
+Referência: [tutorial de ORM usado na aula](https://github.com/marceloakira/tutorials/blob/main/orm/README.md).
