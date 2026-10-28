@@ -4,13 +4,13 @@ Respostas a questões de múltipla escolha sobre Java e orientação a objetos.
 
 ## 1) B
 
-A alternativa está correta porque Java permite que o mesmo programa seja executado em diferentes sistemas por meio da JVM.
+Java permite que o mesmo programa seja executado em diferentes sistemas por meio da JVM.
 
 Referência: Alura - O que é Java.
 
 ## 2) A
 
-A alternativa está correta porque o tipo double armazena números com ponto flutuante.
+O tipo `double` armazena números com ponto flutuante.
 
 Referência: Alura - Variáveis Primitivas e Controle de Fluxo.
 
@@ -31,4 +31,3 @@ Referência: Alura - Orientação a Objetos Básica.
 As quatro afirmações estão corretas: o encapsulamento busca diminuir a exposição dos dados, variáveis declaradas na classe são atributos, atributos recebem valores padrão e, ao criar um objeto, seus atributos são inicializados com valores default quando outro valor não é definido.
 
 Referência: Alura - Orientação a Objetos Básica.
-

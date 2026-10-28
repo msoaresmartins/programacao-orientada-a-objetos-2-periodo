@@ -1,7 +1,5 @@
 # Cadastro de produtos com ORM
 
-Projeto da disciplina de Programação Orientada a Objetos.
-
 Usei a classe `Produto` do AlphaField, um projeto de estoque para pequenas mercearias. Ela tem código, nome, preço, quantidade e validade. O ID é gerado pelo banco.
 
 O ORMLite faz o mapeamento para a tabela `produtos` no SQLite. A classe `Database` cuida da conexão com `alphafield.db`, e a `ProdutoRepository` tem os métodos do CRUD.
@@ -53,5 +51,3 @@ Fechei e abri o BlueJ novamente, criei a conexão com o mesmo banco e consultei 
 ![Consulta do ID 2](prints/complementares/05-persistencia-consulta-id2.png)
 
 ![Dados do Feijao 1kg recuperados](prints/05-persistencia.png)
-
-

@@ -1,7 +1,5 @@
 # Interfaces em Java
 
-Exercício da disciplina de Programação Orientada a Objetos.
-
 Continuei o exemplo dos ninjas. `Naruto` e `Sasuke` herdam de `Ninja` e implementam a interface `Jutsu`, que declara o método `usarJutsu()`.
 
 No `Programa`, coloquei os quatro objetos em um array de `Jutsu`. O laço chama `usarJutsu()` para todos: Naruto usa Rasengan e Sasuke usa Chidori.
@@ -16,5 +14,3 @@ Sasuke Sharingan usa Chidori!!
 ```
 
 Compile as cinco classes e execute `Programa`.
-
-
