@@ -18,17 +18,3 @@ Estudos e projetos em Java da disciplina de Programação Orientada a Objetos.
 | Prática de Git | [Repositório POO](https://github.com/msoaresmartins/POO) |
 
 Os exemplos de revisão para a primeira prova estão em [estudos/p1](estudos/p1).
-
-## Como abrir
-
-Abra uma atividade por vez no BlueJ ou no VS Code. Algumas pastas repetem nomes de classes.
-
-Para os exercícios de console, também dá para usar o terminal dentro da pasta:
-
-```sh
-javac -encoding UTF-8 *.java
-java Programa
-```
-
-Troque `Programa` pela classe principal do exercício, como `Ex1`, `Main` ou `TesteBateria`. O trabalho de JavaFX está documentado no PDF da pasta correspondente.
-
