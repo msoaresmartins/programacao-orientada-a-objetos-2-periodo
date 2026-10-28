@@ -54,12 +54,3 @@ Fechei e abri o BlueJ novamente, criei a conexão com o mesmo banco e consultei 
 
 ![Dados do Feijao 1kg recuperados](prints/05-persistencia.png)
 
-## Para executar
-
-Abra esta pasta no BlueJ e compile as três classes. Crie um `Database("alphafield.db")` e passe esse objeto para o construtor de `ProdutoRepository`.
-
-As bibliotecas estão em `+libs`: ORMLite 6.1, SQLite JDBC 3.46.0.0 e SLF4J 2.0.13. Para a validade, use uma data como `java.sql.Date.valueOf("2027-12-31")`.
-
-Os IDs podem mudar em outros testes. Para testar a persistência, é preciso reabrir a mesma pasta e usar o mesmo banco.
-
-Referência: [tutorial de ORM usado na aula](https://github.com/marceloakira/tutorials/blob/main/orm/README.md).
