@@ -1,6 +1,6 @@
-# 27/10 - AT-10-27-1: Implementar ORM de uma classe Modelo do Projeto
+# Cadastro de produtos com ORM
 
-[Atividade no Turing](https://turing.inf.ufg.br/mod/forum/view.php?id=77433) — prazo: 02/11.
+Projeto da disciplina de Programação Orientada a Objetos.
 
 Usei a classe `Produto` do AlphaField, um projeto de estoque para pequenas mercearias. Ela tem código, nome, preço, quantidade e validade. O ID é gerado pelo banco.
 
@@ -53,4 +53,5 @@ Fechei e abri o BlueJ novamente, criei a conexão com o mesmo banco e consultei 
 ![Consulta do ID 2](prints/complementares/05-persistencia-consulta-id2.png)
 
 ![Dados do Feijao 1kg recuperados](prints/05-persistencia.png)
+
 

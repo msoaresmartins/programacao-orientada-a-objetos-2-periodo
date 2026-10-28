@@ -1,6 +1,6 @@
 # Respostas ao questionário de um colega
 
-Publiquei estas respostas em 27/09, no tópico [Questões de múltipla escolha](https://turing.inf.ufg.br/mod/forum/discuss.php?d=15797#p28430).
+Respostas a questões de múltipla escolha sobre Java e orientação a objetos.
 
 ## 1) B
 
@@ -31,3 +31,4 @@ Referência: Alura - Orientação a Objetos Básica.
 As quatro afirmações estão corretas: o encapsulamento busca diminuir a exposição dos dados, variáveis declaradas na classe são atributos, atributos recebem valores padrão e, ao criar um objeto, seus atributos são inicializados com valores default quando outro valor não é definido.
 
 Referência: Alura - Orientação a Objetos Básica.
+

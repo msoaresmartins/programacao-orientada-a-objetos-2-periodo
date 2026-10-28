@@ -1,6 +1,6 @@
-# 25/09 - Elabore e responda questões objetivas sobre tópicos da prova
+# Questões de revisão de Programação Orientada a Objetos
 
-Prazo: 28/09, 23:59 · [Enunciado no Turing](https://turing.inf.ufg.br/mod/forum/view.php?id=77116)
+Exercício da disciplina de Programação Orientada a Objetos.
 
 Questões que postei para a revisão da P1, com gabarito e minhas respostas às questões de um colega.
 
@@ -8,4 +8,4 @@ Questões que postei para a revisão da P1, com gabarito e minhas respostas às 
 - [Gabarito comentado](gabarito.md)
 - [Respostas ao questionário de um colega](respostas.md)
 
-[Minha postagem de questões e gabarito](https://turing.inf.ufg.br/mod/forum/discuss.php?d=15798).
+

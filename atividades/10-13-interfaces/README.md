@@ -1,6 +1,6 @@
-# 13/10 - AT-10-13: Interface do Projeto
+# Interfaces em Java
 
-[TEO+LAB] · Prazo: 19/10 · [Enunciado no Turing](https://turing.inf.ufg.br/mod/forum/view.php?id=77287)
+Exercício da disciplina de Programação Orientada a Objetos.
 
 Continuei o exemplo dos ninjas. `Naruto` e `Sasuke` herdam de `Ninja` e implementam a interface `Jutsu`, que declara o método `usarJutsu()`.
 
@@ -17,4 +17,4 @@ Sasuke Sharingan usa Chidori!!
 
 Compile as cinco classes e execute `Programa`.
 
-[Minha entrega no Turing](https://turing.inf.ufg.br/mod/forum/discuss.php?d=15924#p28685).
+

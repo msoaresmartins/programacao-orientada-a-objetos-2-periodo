@@ -1,6 +1,6 @@
-# 06/10 - AT-10-06-3: Classe Abstrata do Projeto
+# Classes abstratas
 
-[TEO+LAB] · Prazo: 12/10 · [Enunciado no Turing](https://turing.inf.ufg.br/mod/forum/view.php?id=77232)
+Exercício da disciplina de Programação Orientada a Objetos.
 
 `Ninja` é a classe abstrata. `Naruto` e `Sasuke` herdam dela e cada um tem sua versão de `usarJutsu()`.
 
@@ -12,4 +12,4 @@ Não dá para criar um objeto diretamente de uma classe abstrata. Dá para usar 
 
 Para testar, compile as quatro classes e execute `Programa`.
 
-[Minha entrega no Turing](https://turing.inf.ufg.br/mod/forum/discuss.php?d=15860#p28593).
+
