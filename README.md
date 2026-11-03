@@ -15,6 +15,8 @@ Estudos e projetos em Java da disciplina de Programação Orientada a Objetos.
 | Interfaces | [Interface Jutsu](atividades/10-13-interfaces) |
 | JavaFX e MVC | [Relatório da calculadora de Bhaskara](atividades/10-20-javafx-mvc) |
 | Persistência com ORM | [Cadastro de produtos do AlphaField](atividades/10-27-cadastro-produtos) |
+| JavaFX com banco de dados | [Listagem e cadastro de produtos do AlphaField](atividades/11-03-javafx-crud) |
+| Coleções e exceções | [Produtos em memória com tratamento de erros](atividades/11-03-colecoes-excecoes) |
 | Prática de Git | [Repositório POO](https://github.com/msoaresmartins/POO) |
 
 Os exemplos de revisão para a primeira prova estão em [estudos/p1](estudos/p1).
