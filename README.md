@@ -16,7 +16,7 @@ Estudos e projetos em Java da disciplina de Programação Orientada a Objetos.
 | JavaFX e MVC | [Relatório da calculadora de Bhaskara](atividades/JavaFX%20e%20MVC%20-%20%2820-10%29) |
 | Persistência com ORM | [Cadastro de produtos do AlphaField](atividades/Cadastro%20de%20produtos%20-%20%2827-10%29) |
 | JavaFX com banco de dados | [Listagem e cadastro de produtos do AlphaField](atividades/JavaFX%20e%20banco%20de%20dados%20-%20%2803-11%29) |
-| Coleções e exceções | [Produtos em memória com tratamento de erros](atividades/Cole%C3%A7%C3%B5es%20e%20exce%C3%A7%C3%B5es%20-%20%2803-11%29) |
+| Coleções e exceções (bônus) | [Produtos em memória com tratamento de erros](atividades/Cole%C3%A7%C3%B5es%20e%20exce%C3%A7%C3%B5es%20-%20%2803-11%29) |
 | Prática de Git | [Repositório POO](https://github.com/msoaresmartins/POO) |
 
 Os exemplos de revisão para a primeira prova estão em [estudos/p1](estudos/p1).
