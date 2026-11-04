@@ -1,6 +1,6 @@
 # AT-11-03: AlphaField JavaFX
 
-Tela simples para listar e cadastrar produtos de uma mercearia. A entidade Produto tem código, nome, preço, quantidade e validade. Reaproveitei `Produto`, `Database` e `ProdutoRepository` da [atividade de 27/10](../10-27-cadastro-produtos), sem alterar os arquivos antigos. A tela usa JavaFX e o cadastro fica salvo em SQLite por meio do ORMLite.
+Tela simples para listar e cadastrar produtos de um supermercado. A entidade Produto tem código, nome, preço, quantidade e validade. Reaproveitei `Produto`, `Database` e `ProdutoRepository` da [atividade de 27/10](../10-27-cadastro-produtos), sem alterar os arquivos antigos. A tela usa JavaFX e o cadastro fica salvo em SQLite por meio do ORMLite.
 
 ## Executar
 
