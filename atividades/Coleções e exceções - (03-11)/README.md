@@ -12,4 +12,10 @@ Com JDK 21, nesta pasta: `javac -encoding UTF-8 *.java` e `java Main`. No BlueJ,
 
 Ao executar `Main`, aparecem a inclusão, a listagem, a busca e a remoção. Depois aparecem três erros tratados (código duplicado, preço inválido e produto inexistente). A última linha mostra que o programa continuou e cadastrou outro produto após os erros.
 
-Para a entrega, falta uma captura da janela de saída do BlueJ ou do terminal com essa execução.
+Classes compiladas no BlueJ:
+
+![Classes do projeto no BlueJ](prints/01-classes-bluej.png)
+
+Saída do programa com a lista, a busca, a remoção e os erros tratados:
+
+![Execução do programa no terminal do BlueJ](prints/02-execucao-e-erros-tratados.png)
