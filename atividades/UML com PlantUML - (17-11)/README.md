@@ -1,52 +1,41 @@
 # AT-11-17 · UML com PlantUML
 
-| | |
-| --- | --- |
-| **Universidade** | Universidade Federal de Goiás (UFG) |
-| **Curso e disciplina** | Engenharia de Computação · Programação Orientada a Objetos (INF0396) |
-| **Professor** | Marcelo Akira Inuzuka |
-| **Atividade** | Laboratório de UML básico com PlantUML, com entrega até 23/11/2026 |
+Laboratório de POO (INF0396), Engenharia de Computação da UFG, com o professor Marcelo Akira Inuzuka. Entrega até 23/11/2026.
 
-O AlphaField é um sistema de controle de estoque para pequenas mercearias. Nesta atividade, o objetivo é mostrar as operações de estoque de um Operador e detalhar o que acontece quando ele registra uma saída.
+O AlphaField controla o estoque de pequenas mercearias. O diagrama mostra as operações do Operador, e a descrição explica como funciona a saída de um produto.
 
-## Diagrama de caso de uso
+## Diagrama
 
-![Operador do AlphaField ligado a cinco casos de uso de controle de estoque](docs/uml/caso-de-uso.png)
+![Diagrama de caso de uso do Operador](docs/uml/caso-de-uso.png)
 
-O Operador representa quem usa o sistema no dia a dia da mercearia. O retângulo delimita o AlphaField e as elipses representam as operações que ele oferece. Cada linha liga o Operador a uma operação da qual participa. O diagrama usa associações simples. A checagem do saldo durante uma saída é um passo dessa operação, enquanto **Consultar estoque** representa uma operação que pode ser iniciada por conta própria.
+O Operador fica fora do retângulo que representa o AlphaField. As linhas ligam esse ator às operações de que ele participa. A consulta de estoque pode ser feita por conta própria. Na saída, o sistema também verifica o saldo antes de registrar a retirada.
 
-| Arquivo | O que mostra |
-| --- | --- |
-| [caso-de-uso.puml](docs/uml/caso-de-uso.puml) | Fonte do diagrama para edição no PlantUML. |
-| [caso-de-uso.png](docs/uml/caso-de-uso.png) | Imagem gerada a partir do arquivo `.puml`. |
-| [descricao-caso-de-uso.md](docs/uml/descricao-caso-de-uso.md) | Fluxo de uma saída, condições de sucesso e alternativas quando o registro não pode ser concluído. |
+- [Código PlantUML](docs/uml/caso-de-uso.puml)
+- [Imagem do diagrama](docs/uml/caso-de-uso.png)
+- [Descrição de Registrar saída de produto](docs/uml/descricao-caso-de-uso.md)
 
-## Garantia de qualidade
+## O que conferir na saída
 
-A contribuição de QA foi explicitar o que acontece com o saldo e com o histórico depois de uma operação. Em uma saída válida, os dois são atualizados. Um código inexistente, uma quantidade inválida ou um saldo insuficiente leva à rejeição da tentativa, preservando o saldo e o histórico. A descrição serve de base para definir testes de comportamento após a revisão do grupo. A verificação feita nesta atividade foi a renderização do diagrama.
+Para QA, o ponto principal é conferir o saldo e o histórico. Se havia 10 unidades e saíram 3, devem sobrar 7 e a saída deve aparecer no histórico. Se a tentativa for recusada, os dois devem ficar como estavam.
 
-## Escopo e premissas
+A proposta inicial prevê os perfis Gerente e Operador. Ainda falta confirmar com o grupo se o Operador pode fazer as cinco operações do diagrama. A descrição considera um produto por saída, quantidades inteiras e bloqueio de saldo negativo. O fluxo de saída, incluindo o tratamento de falhas, também está aberto à revisão do grupo.
 
-A proposta inicial, nas seções 1 e 2.2, documenta o papel de QA, o cadastro e a atualização de produtos, a consulta de estoque, as entradas e saídas e os perfis Gerente e Operador. O diagrama considera que o Operador tem permissão para as cinco operações do recorte. A distribuição dessas permissões entre os perfis ainda precisa ser confirmada.
+## Como gerar a imagem
 
-O fluxo de saída, a quantidade em unidades inteiras, o bloqueio de saldo negativo e o tratamento de falhas foram detalhados como propostas. O recorte cobre uma saída de um produto por vez. A equipe ainda precisa decidir como tratar unidades fracionárias. As regras deste laboratório descrevem um comportamento esperado para discussão e integração com o grupo.
-
-## Como editar e gerar a imagem
-
-O GitHub mostra o PNG acima. Para alterar o diagrama, abra [caso-de-uso.puml](docs/uml/caso-de-uso.puml) e edite o texto. Com Java e Graphviz instalados, salve o [JAR do PlantUML](https://plantuml.com/download) com o nome `plantuml.jar` na pasta da atividade e execute:
+Edite o arquivo `.puml`. Com Java e Graphviz instalados, baixe o [JAR do PlantUML](https://plantuml.com/download), salve como `plantuml.jar` na pasta da atividade e rode:
 
 ```sh
 java -jar plantuml.jar -charset UTF-8 -tpng docs/uml/caso-de-uso.puml
 ```
 
-O comando gera `docs/uml/caso-de-uso.png`. Versione a fonte e a imagem juntas ao atualizar o diagrama.
+Ao alterar o diagrama, envie o `.puml` e o novo PNG juntos.
 
-## Como levar os arquivos ao repositório do grupo
+## Como passar para o repositório do grupo
 
-1. Acesse o repositório oficial quando ele estiver disponível. Com acesso de escrita, crie uma branch a partir da branch indicada pelo grupo, por exemplo `docs/at-11-17-uml`. Se tiver somente leitura e o repositório permitir, use um fork. Caso contrário, peça acesso de escrita ao líder.
-2. Baixe os três arquivos de `docs/uml/` pelos links acima. No GitHub, abra a pasta de destino na branch de trabalho, use **Add file → Upload files** e mantenha os três arquivos juntos.
-3. Se a equipe quiser aproveitar este README, copie as seções desejadas para a documentação do projeto e confira os caminhos da imagem e dos arquivos a partir do novo local.
-4. Faça o commit na branch de trabalho. Confira no GitHub a imagem e a descrição. Quando decidir apresentar a contribuição, abra o pull request com destino à branch indicada pelo grupo e sinalize as regras propostas para revisão.
+1. Crie uma branch no repositório oficial. Se tiver apenas acesso de leitura e o grupo permitir, trabalhe em um fork.
+2. Baixe os três arquivos de `docs/uml/` e envie juntos para a pasta de documentação do grupo com **Add file → Upload files**.
+3. Faça o commit e confira a imagem e a descrição. Se aproveitar este README, ajuste os caminhos dos arquivos na pasta de destino.
+4. Quando for enviar para revisão, abra um pull request para a branch indicada pelo grupo e mencione as regras que ainda precisam ser confirmadas.
 
 ## Referências
 
@@ -56,6 +45,4 @@ O comando gera `docs/uml/caso-de-uso.png`. Versione a fonte e a imagem juntas ao
 - [GitHub Docs · Branches](https://docs.github.com/pt/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-and-deleting-branches-within-your-repository) · [Forks](https://docs.github.com/pt/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo) · [Pull requests](https://docs.github.com/pt/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request)
 - Plano de ensino de INF0396 e [Guia de Integridade Acadêmica da UFG](https://ufg.br/n/185267-nova-versao-do-guia-de-integridade-academica-traz-capitulo-sobre-ia).
 
-## Uso de inteligência artificial
-
-O Codex auxiliou na leitura das fontes, na elaboração do diagrama e do texto, na conferência da renderização e na organização dos arquivos. A revisão das premissas com o grupo e a explicação dos artefatos fazem parte da preparação do estudante para a entrega.
+**Uso de IA.** O Codex ajudou a organizar a atividade e a preparar e revisar o diagrama e a descrição. O escopo foi conferido com a proposta inicial e o diagrama foi validado no PlantUML. As permissões e regras propostas ainda dependem do grupo.
