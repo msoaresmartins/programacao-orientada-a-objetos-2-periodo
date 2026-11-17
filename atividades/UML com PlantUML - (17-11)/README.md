@@ -1,7 +1,5 @@
 # AT-11-17 · UML com PlantUML
 
-Laboratório de POO (INF0396), Engenharia de Computação da UFG, com o professor Marcelo Akira Inuzuka. Entrega até 23/11/2026.
-
 O AlphaField controla o estoque de pequenas mercearias. O diagrama mostra as operações do Operador, e a descrição explica como funciona a saída de um produto.
 
 ## Diagrama
@@ -43,4 +41,3 @@ Ao alterar o diagrama, envie o `.puml` e o novo PNG juntos.
 - [Tutorial do professor · UML Básico com PlantUML](https://github.com/poo-ee-2025-1/tutorials/tree/main/uml-b%C3%A1sico)
 - [PlantUML · Diagrama de caso de uso](https://plantuml.com/use-case-diagram)
 - [GitHub Docs · Branches](https://docs.github.com/pt/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-and-deleting-branches-within-your-repository) · [Forks](https://docs.github.com/pt/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo) · [Pull requests](https://docs.github.com/pt/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request)
-- Plano de ensino de INF0396.
