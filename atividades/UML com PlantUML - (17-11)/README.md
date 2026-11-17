@@ -43,6 +43,4 @@ Ao alterar o diagrama, envie o `.puml` e o novo PNG juntos.
 - [Tutorial do professor · UML Básico com PlantUML](https://github.com/poo-ee-2025-1/tutorials/tree/main/uml-b%C3%A1sico)
 - [PlantUML · Diagrama de caso de uso](https://plantuml.com/use-case-diagram)
 - [GitHub Docs · Branches](https://docs.github.com/pt/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-and-deleting-branches-within-your-repository) · [Forks](https://docs.github.com/pt/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo) · [Pull requests](https://docs.github.com/pt/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request)
-- Plano de ensino de INF0396 e [Guia de Integridade Acadêmica da UFG](https://ufg.br/n/185267-nova-versao-do-guia-de-integridade-academica-traz-capitulo-sobre-ia).
-
-**Uso de IA.** O Codex ajudou a organizar a atividade e a preparar e revisar o diagrama e a descrição. O escopo foi conferido com a proposta inicial e o diagrama foi validado no PlantUML. As permissões e regras propostas ainda dependem do grupo.
+- Plano de ensino de INF0396.
