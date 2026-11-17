@@ -4,36 +4,36 @@
 | --- | --- |
 | **Nome** | Registrar saída de produto |
 | **Ator principal** | Operador |
-| **Descrição** | O Operador registra a retirada de uma quantidade de um produto do estoque, por venda ou baixa. |
-| **Pré-condições** | O Operador tem acesso à função de registrar saídas (permissão proposta). |
-| **Pós-condições em caso de sucesso** | A saída aparece no histórico de movimentações e o saldo do produto diminui pela quantidade informada. |
-| **Pós-condições em caso de rejeição** | A tentativa rejeitada mantém o saldo e o histórico de movimentações como estavam. |
+| **Descrição** | Registrar a retirada de um produto do estoque por venda ou baixa. |
+| **Pré-condição** | O Operador tem permissão para registrar saídas. Essa permissão está sujeita à confirmação do grupo. |
+| **Pós-condição em caso de sucesso** | A saída entra no histórico e o saldo diminui pela quantidade retirada. |
+| **Pós-condição em caso de rejeição** | O saldo e o histórico ficam como estavam. |
 
-A proposta inicial do AlphaField prevê saídas por venda ou baixa e consulta ao histórico de movimentações. Os passos de interação e as regras abaixo detalham esse escopo para o laboratório e ficam sujeitos à validação do grupo.
+A proposta do AlphaField prevê a saída de produtos. O fluxo e as regras a seguir são propostas para discussão com o grupo.
 
 ## Fluxo principal
 
-1. O Operador abre a função **Registrar saída de produto**.
-2. O Operador informa o código do produto e a quantidade que deseja retirar, então solicita o registro.
-3. O AlphaField localiza o produto pelo código.
-4. O AlphaField verifica se a quantidade informada é válida.
-5. O AlphaField verifica se o saldo atual cobre a quantidade solicitada.
-6. O AlphaField registra a saída no histórico e atualiza o saldo.
-7. O AlphaField confirma o registro e informa o saldo resultante.
+1. O Operador abre **Registrar saída de produto**.
+2. Informa o código do produto e a quantidade a retirar, depois solicita o registro.
+3. O sistema busca o produto pelo código.
+4. O sistema verifica se a quantidade é um número inteiro maior que zero.
+5. O sistema verifica se há saldo suficiente.
+6. O sistema registra a saída e desconta a quantidade do saldo.
+7. O sistema confirma a saída e mostra o novo saldo.
 
 ## Fluxos alternativos
 
-| Passo | Situação | Resposta do sistema |
+| Passo | Se acontecer | O sistema faz o quê |
 | --- | --- | --- |
-| **3a** | O código informado não corresponde a um produto cadastrado. | Informa que o produto não foi encontrado. O Operador pode corrigir o código no passo 2 ou encerrar a operação. |
-| **4a** | A quantidade está em branco, não é um número inteiro ou é menor ou igual a zero. | Informa que é preciso digitar uma quantidade inteira maior que zero. O Operador pode corrigi-la no passo 2 ou encerrar a operação. |
-| **5a** | A quantidade solicitada é maior que o saldo disponível. | Informa que o estoque é insuficiente e mostra o saldo disponível. O Operador pode ajustar a quantidade no passo 2 ou encerrar a operação. |
-| **6a** | O sistema não consegue concluir o registro da saída ou a atualização do saldo. | Informa que a saída não foi registrada e encerra a tentativa sem deixar alteração parcial no saldo ou no histórico. |
+| **3a** | Código de produto inexistente. | Informa que o produto não foi encontrado. |
+| **4a** | Quantidade em branco, menor ou igual a zero ou que não é um número inteiro. | Pede uma quantidade inteira maior que zero. |
+| **5a** | Quantidade maior que o saldo. | Informa que o estoque é insuficiente e mostra o saldo disponível. |
+| **6a** | Falha ao gravar a saída ou atualizar o saldo. | Informa a falha e encerra a tentativa sem deixar alterações parciais. |
+
+Nos casos 3a, 4a e 5a, o Operador pode voltar ao passo 2 para corrigir os dados ou encerrar a operação.
 
 ## Regras de negócio propostas
 
-- A quantidade é medida em unidades inteiras neste recorte. A venda por peso ou volume depende de definição do grupo.
-- A saída pode consumir todo o saldo disponível. Se a quantidade solicitada for igual ao saldo, o saldo final será zero.
-- A saída só é confirmada quando o registro da movimentação e a atualização do saldo forem concluídos. O saldo final é o saldo anterior menos a quantidade retirada.
-
-O caso de uso detalha a interação e o comportamento esperado do AlphaField. Esses critérios podem orientar testes futuros depois da validação com a equipe.
+- A quantidade é contada em unidades inteiras. O grupo ainda precisa definir como tratar produtos vendidos por peso ou volume.
+- Se a quantidade retirada for igual ao saldo disponível, o saldo fica em zero.
+- A saída só é confirmada depois de gravar a movimentação e atualizar o saldo.
