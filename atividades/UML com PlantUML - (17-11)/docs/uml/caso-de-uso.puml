@@ -1,0 +1,19 @@
+@startuml
+left to right direction
+
+actor "Operador" as Operador
+
+rectangle "AlphaField — Controle de estoque" {
+  usecase "Cadastrar produto" as Cadastrar
+  usecase "Consultar estoque" as Consultar
+  usecase "Registrar entrada de produto" as Entrada
+  usecase "Registrar saída de produto" as Saida
+  usecase "Atualizar informações de produto" as Atualizar
+}
+
+Operador -- Cadastrar
+Operador -- Consultar
+Operador -- Entrada
+Operador -- Saida
+Operador -- Atualizar
+@enduml
